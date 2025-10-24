@@ -235,8 +235,7 @@ class HomePage extends StatelessWidget {
                   const SizedBox(width: 8),
                   Expanded(
                     child: Text(
-                      'Nota: esta pantalla demuestra explícitamente los widgets básicos requeridos '
-                      '(Text, Row, Column, Stack y Container) para la actividad 3.4.',
+                      'Esto es una advertencia ',
                       style: TextStyle(
                         color: Theme.of(context).colorScheme.onSurface,
                       ),
