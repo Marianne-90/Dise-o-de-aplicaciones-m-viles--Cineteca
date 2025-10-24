@@ -12,8 +12,6 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Uso SingleChildScrollView para que no truene en pantallas pequeñas
-    // si la columna crece (evito overflow).
     return SingleChildScrollView(
       child: Padding(
         padding: const EdgeInsets.all(24),
@@ -42,10 +40,10 @@ class HomePage extends StatelessWidget {
                         colors: [
                           Theme.of(
                             context,
-                          ).colorScheme.primary.withOpacity(0.25),
+                          ).colorScheme.primary.withValues(alpha: 0.25),
                           Theme.of(
                             context,
-                          ).colorScheme.secondary.withOpacity(0.15),
+                          ).colorScheme.primary.withValues(alpha: 0.15),
                         ],
                       ),
                     ),
@@ -61,7 +59,7 @@ class HomePage extends StatelessWidget {
                         shape: BoxShape.circle,
                         color: Theme.of(
                           context,
-                        ).colorScheme.primary.withOpacity(0.2),
+                        ).colorScheme.primary.withValues(alpha: 0.20),
                       ),
                     ),
                   ),
@@ -76,7 +74,7 @@ class HomePage extends StatelessWidget {
                         shape: BoxShape.circle,
                         color: Theme.of(
                           context,
-                        ).colorScheme.secondary.withOpacity(0.2),
+                        ).colorScheme.primary.withValues(alpha: 0.20),
                       ),
                     ),
                   ),
@@ -122,7 +120,7 @@ class HomePage extends StatelessWidget {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(12),
                 border: Border.all(
-                  color: Theme.of(context).dividerColor.withOpacity(0.4),
+                  color: Theme.of(context).dividerColor.withValues(alpha: 0.20),
                 ),
               ),
               child: Column(
@@ -173,7 +171,7 @@ class HomePage extends StatelessWidget {
               decoration: BoxDecoration(
                 color: Theme.of(
                   context,
-                ).colorScheme.surfaceContainerHighest.withOpacity(0.3),
+                ).colorScheme.surfaceContainerHighest.withValues(alpha: 0.30),
                 borderRadius: BorderRadius.circular(12),
               ),
               child: Column(
